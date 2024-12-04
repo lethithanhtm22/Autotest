@@ -1,0 +1,13 @@
+2024/12/03-13:47:50.641 2ba4 Reusing MANIFEST C:\Users\ThanhLT\WebstormProjects\gauuu\dmTien\Default\IndexedDB\https_dev-velein-bcc.atis.vn_0.indexeddb.leveldb/MANIFEST-000001
+2024/12/03-13:47:50.641 2ba4 Recovering log #30
+2024/12/03-13:47:50.642 2ba4 Reusing old log C:\Users\ThanhLT\WebstormProjects\gauuu\dmTien\Default\IndexedDB\https_dev-velein-bcc.atis.vn_0.indexeddb.leveldb/000030.log 
+2024/12/03-13:47:50.678 3684 Level-0 table #35: started
+2024/12/03-13:47:50.685 3684 Level-0 table #35: 876 bytes OK
+2024/12/03-13:47:50.686 3684 Delete type=0 #30
+2024/12/03-13:47:50.686 2ba4 Manual compaction at level-0 from '\x00\x0b\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x0c\x00\x00\x00' @ 0 : 0; will stop at '\x00\x0b\x00\x00\x05' @ 230 : 1
+2024/12/03-13:47:50.686 2ba4 Compacting 1@0 + 1@1 files
+2024/12/03-13:47:50.692 2ba4 Generated table #36@0: 38 keys, 1221 bytes
+2024/12/03-13:47:50.692 2ba4 Compacted 1@0 + 1@1 files => 1221 bytes
+2024/12/03-13:47:50.693 2ba4 compacted to: files[ 0 1 1 0 0 0 0 ]
+2024/12/03-13:47:50.693 2ba4 Delete type=2 #35
+2024/12/03-13:47:50.693 2ba4 Manual compaction at level-0 from '\x00\x0b\x00\x00\x05' @ 230 : 1 .. '\x00\x0c\x00\x00\x00' @ 0 : 0; will stop at (end)

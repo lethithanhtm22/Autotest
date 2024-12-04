@@ -1,0 +1,5 @@
+2024/12/03-13:45:02.918 2b58 Reusing MANIFEST C:\Users\ThanhLT\WebstormProjects\gauuu\dmTien\Default\IndexedDB\https_dev-velein-bcc.atis.vn_0.indexeddb.leveldb/MANIFEST-000001
+2024/12/03-13:45:02.918 2b58 Recovering log #30
+2024/12/03-13:45:02.918 2b58 Reusing old log C:\Users\ThanhLT\WebstormProjects\gauuu\dmTien\Default\IndexedDB\https_dev-velein-bcc.atis.vn_0.indexeddb.leveldb/000030.log 
+2024/12/03-13:45:02.919 2b58 Delete type=2 #28
+2024/12/03-13:45:02.949 2994 Manual compaction at level-0 from '\x00\x0a\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x0b\x00\x00\x00' @ 0 : 0; will stop at (end)
