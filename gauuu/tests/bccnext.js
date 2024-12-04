@@ -98,6 +98,15 @@ async function clickElementBox(page, xPath, timeout = 10000) {
     }
 }
 
+async function clickPosition(page, x, y) {
+    try {
+        await page.mouse.click(x, y, {delay: 35})
+    } catch (e) {
+
+    }
+}
+
+
 async function clickAllElement(page, xPath, timeout = 10000) {
     try {
         await page.waitForSelector(xPath, {timeout})
@@ -200,21 +209,21 @@ function getXpathSelect(p) {
 
 let browser
 let page
-step("Start browser", async () => {
+step("Start browserbccnext", async () => {
     browser = await puppeteer.launch({
         headless: false,
         args: [`--window-size=1920,1080`],
         defaultViewport: {
-            width:1920,
-            height:1080
+            width: 1920,
+            height: 1080
         }
     })
     page = await browser.newPage()
-    page.setViewport({ width: 1920, height: 1080 })
+    page.setViewport({width: 1920, height: 1080})
 })
 
-step("Login <arg0> and <arg1>", async function (username, password) {
-    await page.goto(`https://dev-velein-bcc.atis.vn`, {waitUntil: "networkidle2"})
+step("Login bccnext <arg0> and <arg1>", async function (username, password) {
+    await page.goto(`https://dev-bcc-next.baohiemtasco.vn`, {waitUntil: "networkidle2"})
     await delay(2000)
     await clickElement(page, getXpathClsLast("login-form-button"), 5000);
     await delay(1000)
@@ -224,90 +233,39 @@ step("Login <arg0> and <arg1>", async function (username, password) {
     await page.keyboard.press("Enter")
     await delay(5000)
 })
-//Case1: Tìm kiếm
-// step("Search <arg0>", async function (searchtext) {
-//     await clickElement(page,getXpathSelect("//*[@id=\"root\"]/div/div[1]/div[1]/aside/div/ul/li[3]"),5000);
+// step("status <arg0>", async function (status) {
+//     // await clickElement(page,getXpathSelect("//*[@id=\"root\"]/div/div[2]/div[1]/div/header/div/div[2]/div[1]"),5000);
+//     // await delay(1000)
+//     await clickElement(page,getXpathSelect("//*[@id=\"root\"]/div/div[2]/div[1]/div/header/div/div[2]/div[1]/div/span[2]/div"),5000);
 //     await delay(1000)
-//     await clickElement(page,getXpathClsLast("ant-input-outlined"),5000);
-//     await delay(1000)
-//     await page.keyboard.type(searchtext)
-//     await page.keyboard.press("Enter")
-//     await delay(5000)
+//     // await page.select(status)
+//     await page.click.press("Ready")
+//     await delay(3000)
 // })
-//Case2: Lọc trạng thái
-// step("Status <arg0>", async function (status) {
-//     await clickElement(page, getXpathSelect("//*[@id=\"root\"]/div/div[1]/div[1]/aside/div/ul/li[3]"), 5000);
-//     await delay(1000)
-//     await clickElement(page, getXpathSelect("//*[@id=\"root\"]/div/div[1]/div[1]/div/main/div/div[1]/div[2]/div[1]/div/div/div[1]/button/div"), 5000);
-//     await delay(1000)
-//     await clickElement(page, getXpathClsIndex('ant-dropdown-menu-item ant-dropdown-menu-item-only-child', 2), 10000)
-//     await delay(10000)
-//     await page.select(status)
-//     await page.click.press("Advise")
-//     await delay(5000)
-// })
-//Case3: Lọc chiến dịch
-// step("Campaign <arg0>", async function (Campaign) {
-//     await clickElement(page, getXpathSelect("//*[@id=\"root\"]/div/div[1]/div[1]/aside/div/ul/li[3]"), 5000);
-//     await delay(1000)
-//     await clickElement(page, getXpathSelect("//*[@id=\"root\"]/div/div[1]/div[1]/div/main/div/div[1]/div[2]/div[1]/div/div/div[1]/button/div"), 5000);
-//     await delay(1000)
-//     await clickElement(page, getXpathClsIndex('ant-dropdown-menu-item ant-dropdown-menu-item-only-child', 2), 10000)
-//     await delay(10000)
-//     await page.select(status)
-//     await page.click.press("Advise")
-//     await delay(5000)
-// })
-//Case4: Cấp đơn
-step("Status <arg0>", async function (status) {
-    await clickElement(page, getXpathSelect("//*[@id=\"root\"]/div/div[1]/div[1]/aside/div/ul/li[3]"), 5000);
+step("search <arg0>", async function (search) {
+    // await clickElement(page,getXpathSelect("//*[@id=\"root\"]/div/div[2]/div[1]/div/header/div/div[2]/div[1]"),5000);
+    // await delay(1000)
+    await clickElement(page, getXpathClsLast("ant-select-selection-search-input"), 5000);
     await delay(1000)
-    await clickElement(page, getXpathSelect("//*[@id=\"root\"]/div/div[1]/div[1]/div/main/div/div[1]/div[2]/div[3]/div/div/div/div/div/table/tbody/tr[2]/td[8]/div/button"), 5000);
+    await clickPosition(page,1744,72)
     await delay(1000)
-    await clickElement(page, getXpathSelect("//*[@id=\"policy-drawer\"]/div[2]/div/div/form/div/div[4]/div[1]/div[1]/div[3]/div/div[3]/div"), 5000);
+    // await page.select(search)
+    // await page.click.press("Ready")
+    // await delay(3000)
+})
+step("phonebccnext <arg0>", async function (text) {
+    await clickElement(page, getXpathClsLast("injected-svg"), 5000);
     await delay(1000)
-    await clickElement(page,getXpathClsLast("ant-input-outlined"),5000);
+    // await clickElement(page, getXpathClsLast("ant-input css-af5nc7 ant-input-outlined text-gray-900 text-2xl text-green-500"), 5000);
+    // await delay(1000)
+    await page.keyboard.type(text, {timeout: 100})
+    await delay(2000)
+    // const isBtnCall = await waitForVerifyDisplayed(page, getXpathSelect("/html/body/div[3]/div/div[2]/div/div[2]/div/button"), 5000)
+    const cc = await clickElement(page, getXpathClsLast("acss-14watmr"), 5000);
+    console.log(cc)
+    await delay(100000)
     await delay(1000)
 })
-//Biển số xe
-step("license_plate <arg0>", async function (text) {
-    await clickElement(page,getXpathSelect("//*[@id=\"license_plate\"]"),5000);
-    await delay(1000)
-    await page.keyboard.type(text)
-    await page.keyboard.press("Tab")
-    await delay(5000)
-})
-//Số khung
-step("vin_number <arg0>", async function (text) {
-    await clickElement(page,getXpathSelect("//*[@id=\"vin_number\"]"),5000);
-    await delay(1000)
-    await page.keyboard.type(text)
-    await page.keyboard.press("Tab")
-    await delay(1000)
-})
-//Số máy
-step("engine_number <arg0>", async function (text) {
-    await clickElement(page,getXpathSelect("//*[@id=\"engine_number\"]"),5000);
-    await delay(1000)
-    await page.keyboard.type(text)
-    // await page.keyboard.press("Tab")
-    await delay(1000)
-})
-step("phone <arg0>", async function (text) {
-    await clickElement(page,getXpathSelect("//*[@id=\"policy-drawer\"]/div[2]/div/div/form/div/div[4]/div[1]/div[1]/div[2]/div"),5000);
-    await delay(1000)
-    await clickElement(page,getXpathSelect("//*[@id=\"phone\"]"),5000);
-    await delay(1000)
-    await page.keyboard.type(text)
-    await page.keyboard.press("Tab")
-    await delay(1000)
-})
-step("name <arg0>", async function (text) {
-    await clickElement(page,getXpathSelect("//*[@id=\"name\"]"),5000);
-    await delay(1000)
-    await page.keyboard.type(text)
-    await page.keyboard.press("Tab")
-    await delay(1000)
-})
+
 ;
 

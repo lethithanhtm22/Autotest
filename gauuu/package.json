@@ -2,7 +2,8 @@
   "name": "gauge-taiko-template",
   "description": "Starter template for writing JavaScript tests for Gauge",
   "scripts": {
-    "test": "gauge run specs/"
+    "test": "gauge run specs/bcc.spec",
+    "testbccnext": "gauge run specs/bccnext.spec"
   },
   "dependencies": {
     "puppeteer": "^23.9.0",
