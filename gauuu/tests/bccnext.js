@@ -218,6 +218,11 @@ step("Start browserbccnext", async () => {
             height: 1080
         }
     })
+
+    // browser = await puppeteer.connect({
+    //     browserWSEndpoint: 'ws://localhost:9222/devtools/browser/ade1b924-b7bf-4968-b2d8-501f43790d96',
+    // });
+
     page = await browser.newPage()
     page.setViewport({width: 1920, height: 1080})
 })
@@ -247,7 +252,7 @@ step("search <arg0>", async function (search) {
     // await delay(1000)
     await clickElement(page, getXpathClsLast("ant-select-selection-search-input"), 5000);
     await delay(1000)
-    await clickPosition(page,1744,72)
+    await clickPosition(page,1730,37)
     await delay(1000)
     // await page.select(search)
     // await page.click.press("Ready")
@@ -263,9 +268,19 @@ step("phonebccnext <arg0>", async function (text) {
     // const isBtnCall = await waitForVerifyDisplayed(page, getXpathSelect("/html/body/div[3]/div/div[2]/div/div[2]/div/button"), 5000)
     const cc = await clickElement(page, getXpathClsLast("acss-14watmr"), 5000);
     console.log(cc)
-    await delay(100000)
     await delay(1000)
-})
+    // Chọn radio gọi bằng số nào dưới đây
+    await clickElement(page, getXpathSelect("/html/body/div[7]/div/div[2]/div/div[2]/div/div[1]/div[2]/div/div[3]/label"), 5000);
+    await delay(1000)
+    //gọi
+    await clickElement(page, getXpathClsLast("ant-btn css-af5nc7 ant-btn-primary"), 5000);
+    await delay(1000)
 
+})
+// step("radiobccnext <arg0>", async function (radio) {
+//     console.log(12313, radio)
+//     await clickElement(radio, getXpathClsLast("ant-radio-wrapper"), 5000);
+//     await delay(1000)
+// })
 ;
 
