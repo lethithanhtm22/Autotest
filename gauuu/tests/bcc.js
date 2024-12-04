@@ -202,9 +202,15 @@ let browser
 let page
 step("Start browser", async () => {
     browser = await puppeteer.launch({
-        headless: false
+        headless: false,
+        args: [`--window-size=1920,1080`],
+        defaultViewport: {
+            width:1920,
+            height:1080
+        }
     })
     page = await browser.newPage()
+    page.setViewport({ width: 1920, height: 1080 })
 })
 
 step("Login <arg0> and <arg1>", async function (username, password) {
@@ -253,12 +259,36 @@ step("Login <arg0> and <arg1>", async function (username, password) {
 //     await delay(5000)
 // })
 //Case4: Cấp đơn
-// step("Status <arg0>", async function (status) {
-//     await clickElement(page, getXpathSelect("//*[@id=\"root\"]/div/div[1]/div[1]/aside/div/ul/li[3]"), 5000);
-//     await delay(1000)
-//     await clickElement(page, getXpathSelect("//*[@id=\"root\"]/div/div[1]/div[1]/div/main/div/div[1]/div[2]/div[3]/div/div/div/div/div/table/tbody/tr[2]/td[8]/div/button"), 5000);
-//     await delay(10000)
-//
-// })
+step("Status <arg0>", async function (status) {
+    await clickElement(page, getXpathSelect("//*[@id=\"root\"]/div/div[1]/div[1]/aside/div/ul/li[3]"), 5000);
+    await delay(1000)
+    await clickElement(page, getXpathSelect("//*[@id=\"root\"]/div/div[1]/div[1]/div/main/div/div[1]/div[2]/div[3]/div/div/div/div/div/table/tbody/tr[2]/td[8]/div/button"), 5000);
+    await delay(5000)
+    await clickElement(page, getXpathSelect("//*[@id=\"policy-drawer\"]/div[2]/div/div/form/div/div[4]/div[1]/div[1]/div[3]/div/div[3]/div"), 5000);
+    await delay(5000)
+    await clickElement(page,getXpathClsLast("ant-input-outlined"),5000);
+    await delay(1000)
+})
+step("license_plate <arg0>", async function (text) {
+    await clickElement(page,getXpathSelect("//*[@id=\"license_plate\"]"),5000);
+    await delay(1000)
+    await page.keyboard.type(text)
+    await page.keyboard.press("Tab")
+    await delay(5000)
+})
+step("vin_number <arg0>", async function (text) {
+    await clickElement(page,getXpathSelect("//*[@id=\"vin_number\"]"),5000);
+    await delay(1000)
+    await page.keyboard.type(text)
+    await page.keyboard.press("Tab")
+    await delay(5000)
+})
+step("engine_number <arg0>", async function (text) {
+    await clickElement(page,getXpathSelect("//*[@id=\"engine_number\"]"),5000);
+    await delay(1000)
+    await page.keyboard.type(text)
+    await page.keyboard.press("Tab")
+    await delay(5000)
+})
 ;
 
