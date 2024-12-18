@@ -309,5 +309,26 @@ step("name <arg0>", async function (text) {
     await page.keyboard.press("Tab")
     await delay(1000)
 })
+step("street <arg0>", async function (text) {
+    await clickElement(page,getXpathSelect("//*[@id=\"street\"]"),5000);
+    await delay(1000)
+    await page.keyboard.type(text)
+    await page.keyboard.press("Tab")
+    await delay(1000)
+})
+step("comment <arg0>", async function (text) {
+    await clickElement(page,getXpathSelect("//*[@id=\"comment\"]"),5000);
+    await delay(1000)
+    await page.keyboard.type(text)
+    await page.keyboard.press("Tab")
+    await delay(1000)
+    await clickElement(page,getXpathSelect("//*[@id=\"is_bank\"]"),5000);
+    await delay(1000)
+})
+// step("search <arg0>", async function (combobox) {
+//     await clickElement(page,getXpathSelect("//*[@id=\"is_bank\"]"),5000);
+//     await delay(1000)
+//
+// })
 ;
 

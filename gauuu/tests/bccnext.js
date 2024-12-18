@@ -270,8 +270,8 @@ step("phonebccnext <arg0>", async function (text) {
     console.log(cc)
     await delay(1000)
     // Chọn radio gọi bằng số nào dưới đây
-    await clickElement(page, getXpathSelect("/html/body/div[7]/div/div[2]/div/div[2]/div/div[1]/div[2]/div/div[3]/label"), 5000);
-    await delay(1000)
+    await clickElement(page, getXpathSelect("/html/body/div[6]/div/div[2]/div/div[2]/div/div[1]/div[2]/div/div[4]/label/span[2]/div/div[2]"), 5000);
+    await delay(2000)
     //gọi
     await clickElement(page, getXpathClsLast("ant-btn css-af5nc7 ant-btn-primary"), 5000);
     await delay(1000)

@@ -31,11 +31,11 @@
    
   <div class="report_chart">
     <div class="chart">
-      <svg id="pie-chart" data-results="1,0,0" data-total="1">
+      <svg id="pie-chart" data-results="0,1,0" data-total="1">
         <path class="status failed" />
-        <path class="shadow failed" data-status="failed"><title>Failed: 1/1</title></path>
+        <path class="shadow failed" data-status="failed"><title>Failed: 0/1</title></path>
         <path class="status passed" />
-        <path class="shadow passed" data-status="passed"><title>Passed: 0/1</title></path>
+        <path class="shadow passed" data-status="passed"><title>Passed: 1/1</title></path>
         <path class="status skipped" />
         <path class="shadow skipped" data-status="skipped"><title>Skipped: 0/1</title></path>
       </svg>
@@ -46,14 +46,14 @@
   <div class="report_test-results">
     <div class="report_test-result specs">
         <div class="total-specs" title="Filter all specs"><span class="txt">Total specs</span><span class="value">1</span></div>
-        <div class="fail spec-filter" data-status="failed" title="Filter failed specs"><span class="value">1</span></div>
-        <div class="pass spec-filter" data-status="passed" title="Filter passed specs"><span class="value">0</span></div>
+        <div class="fail spec-filter" data-status="failed" title="Filter failed specs"><span class="value">0</span></div>
+        <div class="pass spec-filter" data-status="passed" title="Filter passed specs"><span class="value">1</span></div>
         <div class="skip spec-filter" data-status="skipped" title="Filter skipped specs"><span class="value">0</span></div>
     </div>
     <div class="report_test-result scenarios">
         <div class="total-scenarios"><span class="txt">Total scenario</span><span class="value">1</span></div>
-        <div class="fail scenario-stats" data-status="failed"><span class="value">1</span></div>
-        <div class="pass scenario-stats" data-status="passed"><span class="value">0</span></div>
+        <div class="fail scenario-stats" data-status="failed"><span class="value">0</span></div>
+        <div class="pass scenario-stats" data-status="passed"><span class="value">1</span></div>
         <div class="skip scenario-stats" data-status="skipped"><span class="value">0</span></div>
     </div>
   </div>
@@ -68,15 +68,15 @@
     
     <li>
       <label>Success Rate </label>
-      <span>0%</span>
+      <span>100%</span>
     </li>
     <li>
       <label>Total Time </label>
-      <span>00:00:31</span>
+      <span>00:00:20</span>
     </li>
     <li>
       <label>Generated On </label>
-      <span>Dec 4, 2024 at 10:46pm</span>
+      <span>Dec 6, 2024 at 2:37pm</span>
     </li>
   </ul>
 
@@ -114,11 +114,11 @@
         <ul id="scenarios" class="spec-list">
         
           <a href="bccnext.html">
-            
-              <li class="failed spec-name">
+             
+              <li class="passed spec-name">
             
               <span id="scenarioName" class="scenarioname">Show Dashboard</span>
-              <span id="time" class="time">00:00:30</span>
+              <span id="time" class="time">00:00:19</span>
             </li>
           </a>
           
@@ -133,11 +133,11 @@
   <div id="specificationContainer" class="details">
     <header class="curr-spec">
       <div class="spec-head-wrapper">
-        <h3 class="spec-head" title="D:\Autotest\Autotest\gauuu\specs\bccnext.spec">Show Dashboard</h3>
+        <h3 class="spec-head" title="C:\Users\ThanhLT\Autotest\gauuu\specs\bccnext.spec">Show Dashboard</h3>
         <div class="hidden report_test-results" alt="Scenarios" title="Scenarios">
           <ul>
-            <li class="fail"><span class="value">1</span><span class="txt">Failed</span></li>
-            <li class="pass"><span class="value">0</span><span class="txt">Passed</span></li>
+            <li class="fail"><span class="value">0</span><span class="txt">Failed</span></li>
+            <li class="pass"><span class="value">1</span><span class="txt">Passed</span></li>
             <li class="skip"><span class="value">0</span><span class="txt">Skipped</span></li>
           </ul>
         </div>
@@ -145,12 +145,12 @@
       <div class="spec-meta">
         <div class="spec-filename">
           <label for="specFileName">File Path</label>
-          <input id="specFileName" value="D:\Autotest\Autotest\gauuu\specs\bccnext.spec" readonly/>
+          <input id="specFileName" value="C:\Users\ThanhLT\Autotest\gauuu\specs\bccnext.spec" readonly/>
           <button class="clipboard-btn" data-clipboard-target="#specFileName" title="Copy to Clipboard">
               <i class="fa fa-clipboard" aria-hidden="true" title="Copy to Clipboard"></i>
           </button>
         </div>
-        <span class="time">00:00:30</span>
+        <span class="time">00:00:19</span>
       </div>
 
 	
@@ -176,14 +176,14 @@
       
         
 	
-  <div class="scenario-container failed">
+  <div class="scenario-container passed">
     
 
 	
   <div class="scenario-head">
     <h3 class="head borderBottom">Go to BCC</h3>
     
-    <span class="time">00:00:30</span>
+    <span class="time">00:00:19</span>
 
 	
   
@@ -273,10 +273,10 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:30</span>
+      <span class="time">Execution Time : 00:00:10</span>
     </h5>
   
-  <div class="step-info failed">
+  <div class="step-info passed">
   
   <ul>
     <li class="step">
@@ -318,30 +318,6 @@
 
   
     
-        
-  <div class="error-container failed">
-    <div class="exception-container">
-      <div class="exception">
-        <h4 class="error-message">
-          <pre>TimeoutError: Navigation timeout of 30000 ms exceeded</pre>
-        </h4>
-        <pre class="stacktrace">TimeoutError: Navigation timeout of 30000 ms exceeded<br/>    at new Deferred (node_modules\puppeteer-core\lib\cjs\puppeteer\util\Deferred.js:60:34)<br/>    at Deferred.create (node_modules\puppeteer-core\lib\cjs\puppeteer\util\Deferred.js:21:16)<br/>    at new LifecycleWatcher (node_modules\puppeteer-core\lib\cjs\puppeteer\cdp\LifecycleWatcher.js:69:60)<br/>    at CdpFrame.goto (node_modules\puppeteer-core\lib\cjs\puppeteer\cdp\Frame.js:149:29)<br/>    at CdpFrame.&lt;anonymous&gt; (node_modules\puppeteer-core\lib\cjs\puppeteer\util\decorators.js:109:27)<br/>    at CdpPage.goto (node_modules\puppeteer-core\lib\cjs\puppeteer\api\Page.js:574:43)<br/>    at Object.&lt;anonymous&gt; (tests\bccnext.js:231:16)</pre>
-      </div>
-      
-        
-          
-            <div class="screenshot-container custom-screenshot-message">
-              <div class="screenshot">
-              <p class="custom-message">To view a screenshot of this failed step, Please set up a <a href="https://docs.gauge.org/writing-specifications/#taking-custom-screenshots">custom screenshot handler.</a></p>
-              </div>
-            </div>
-          
-        
-      
-    </div>
-  </div>
-
-    
     
   
 
@@ -374,10 +350,10 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:00</span>
+      <span class="time">Execution Time : 00:00:02</span>
     </h5>
   
-  <div class="step-info not-executed">
+  <div class="step-info passed">
   
   <ul>
     <li class="step">
@@ -441,10 +417,10 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:00</span>
+      <span class="time">Execution Time : 00:00:07</span>
     </h5>
   
-  <div class="step-info not-executed">
+  <div class="step-info passed">
   
   <ul>
     <li class="step">

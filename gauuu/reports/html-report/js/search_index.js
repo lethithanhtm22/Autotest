@@ -1,1 +1,1 @@
-var index = {"Tags":{},"Specs":{"Show Dashboard":["specs/bccnext.html"]}};
+var index = {"Tags":{},"Specs":{"Show Dashboard":["specs/bcc.html"]}};

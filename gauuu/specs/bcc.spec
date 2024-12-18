@@ -8,4 +8,6 @@
 * engine_number "4556665"
 * phone "0342216630"
 * name "Lê Thị Thành"
+* street "HN"
+* comment "C oanh đanh đá"
 

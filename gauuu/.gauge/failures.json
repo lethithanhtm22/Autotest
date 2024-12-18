@@ -2,7 +2,5 @@
 	"Args": [
 		"run"
 	],
-	"FailedItems": [
-		"specs\\bccnext.spec:3"
-	]
+	"FailedItems": []
 }

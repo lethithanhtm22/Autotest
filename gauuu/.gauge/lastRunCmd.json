@@ -1,5 +1,5 @@
 [
 	"gauge",
 	"run",
-	"specs/bccnext.spec"
+	"specs/bcc.spec"
 ]
